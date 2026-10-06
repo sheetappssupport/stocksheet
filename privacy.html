@@ -1,0 +1,60 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>นโยบายความเป็นส่วนตัว · Stock Sheet</title></head><body>
+<header><div class="wrap"><img src="icon.png" alt=""><a href="index.html">สต็อกชีต · Stock Sheet</a><nav><a href="privacy.html">นโยบายความเป็นส่วนตัว</a><a href="terms.html">ข้อตกลงการใช้งาน</a></nav></div></header>
+<main><div class="wrap">
+<h1>นโยบายความเป็นส่วนตัว</h1>
+<p class="muted">Privacy Policy · มีผลตั้งแต่ 7 ตุลาคม 2569 (2026-10-07)</p>
+
+<p>นโยบายนี้อธิบายว่าแอป <b>Stock Sheet (สต็อกชีต)</b> ("แอป") เก็บ ใช้ และแชร์ข้อมูลอย่างไร แอปนี้ไม่มีเซิร์ฟเวอร์ของตัวเอง ข้อมูลร้านทั้งหมดอยู่ใน Google Drive ของผู้ใช้</p>
+
+<h2>1. ข้อมูลที่แอปเข้าถึง</h2>
+<table>
+<tr><th>ข้อมูล</th><th>ใช้ทำอะไร</th><th>เก็บที่ไหน</th></tr>
+<tr><td>ชื่อและอีเมลบัญชี Google</td><td>แสดงว่าเข้าสู่ระบบด้วยบัญชีไหน และบันทึกอีเมลผู้ทำรายการในประวัติของร้าน เพื่อให้ทีมรู้ว่าใครทำรายการ</td><td>ในเครื่องของคุณ และในชีตของร้าน (คอลัมน์ "ผู้ทำรายการ")</td></tr>
+<tr><td>ข้อมูลร้าน: สินค้า ยอดคงเหลือ ประวัติรับเข้า–ตัดออก การขาย รายรับ–รายจ่าย ลูกค้า/ผู้จำหน่าย</td><td>ทำงานของแอปตามที่คุณสั่ง</td><td>Google Sheet ใน Google Drive ของเจ้าของร้าน</td></tr>
+<tr><td>รูปสินค้า (เมื่อคุณเลือกเพิ่ม)</td><td>แสดงรูปในรายการสินค้า แอปย่อรูปและตัดข้อมูลตำแหน่ง (GPS) ในรูปออกก่อนบันทึก</td><td>ชีต "Images" ใน Google Sheet ของร้าน</td></tr>
+<tr><td>กล้อง</td><td>สแกนบาร์โค้ด สแกน QR เชิญเข้าร้าน และถ่ายรูปสินค้า แอปขอสิทธิ์เมื่อคุณกดใช้เท่านั้น</td><td>ไม่เก็บภาพจากการสแกน</td></tr>
+<tr><td>Token การเข้าสู่ระบบ</td><td>เรียก Google Sheets และ Google Drive แทนคุณ</td><td>เฉพาะในเครื่องของคุณ จัดการโดยระบบ Google Sign-In ของเครื่อง</td></tr>
+<tr><td>รายชื่อร้านที่เข้าร่วมและรูปประจำร้าน</td><td>แสดงหน้ารายการร้านให้เร็ว</td><td>เฉพาะในเครื่องของคุณ</td></tr>
+</table>
+
+<h2>2. สิทธิ์ Google ที่แอปขอ</h2>
+<ul>
+<li><code>https://www.googleapis.com/auth/spreadsheets</code> — อ่านและเขียน Google Sheet ที่เป็นไฟล์ร้าน รวมถึงร้านที่เจ้าของแชร์ให้คุณ</li>
+<li><code>https://www.googleapis.com/auth/drive.file</code> — สร้างไฟล์ร้านใหม่ ค้นหาไฟล์ร้านที่แอปสร้าง ตั้งค่าการแชร์ร้านให้สมาชิก และสร้างไฟล์เก็บประวัติเก่า (Archive) แอปเข้าถึงได้เฉพาะไฟล์ที่แอปสร้างหรือที่คุณเปิดผ่านแอป ไม่เห็นไฟล์อื่นใน Drive ของคุณ</li>
+<li>ข้อมูลโปรไฟล์พื้นฐาน (อีเมล ชื่อ) จากการเข้าสู่ระบบด้วย Google</li>
+</ul>
+
+<h2>3. การใช้ข้อมูลจาก Google API (Limited Use)</h2>
+<p>การใช้และการส่งต่อข้อมูลที่ได้รับจาก Google APIs ของ Stock Sheet เป็นไปตาม <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> รวมถึงข้อกำหนด Limited Use</p>
+<p lang="en" class="muted">Stock Sheet's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+<ul>
+<li>แอปใช้ข้อมูลจาก Google เพื่อให้ฟีเจอร์ของแอปทำงานตามที่คุณสั่งเท่านั้น</li>
+<li>ไม่ขาย ไม่ส่งต่อ และไม่ใช้ข้อมูลเพื่อโฆษณา</li>
+<li>ไม่ใช้ข้อมูลเพื่อฝึกโมเดล AI หรือ machine learning</li>
+<li>ผู้พัฒนาไม่เห็นข้อมูลของคุณ เพราะข้อมูลวิ่งตรงระหว่างแอปในเครื่องคุณกับ Google</li>
+</ul>
+
+<h2>4. การแชร์ข้อมูล</h2>
+<p>แอปไม่แชร์ข้อมูลให้บุคคลที่สาม ยกเว้นเมื่อ<b>คุณ</b>สั่งแชร์ร้านให้สมาชิก ซึ่งแอปจะเพิ่มสิทธิ์ผ่าน Google Drive ให้อีเมลที่คุณระบุ สมาชิกจะเห็นข้อมูลในไฟล์ร้านนั้นตามสิทธิ์ที่ให้ (แก้ไขได้ หรือดูอย่างเดียว) คุณยกเลิกการแชร์ได้ทุกเมื่อในแอปหรือใน Google Drive</p>
+<p>แอปไม่มีโฆษณา และไม่มีเครื่องมือติดตามหรือวิเคราะห์การใช้งาน (analytics)</p>
+
+<h2>5. ระยะเวลาเก็บและการลบข้อมูล</h2>
+<ul>
+<li>ข้อมูลร้านอยู่ในไฟล์ Google Sheet ของคุณ ตราบที่คุณยังเก็บไฟล์ไว้ ถ้าจะลบ ให้ลบไฟล์ร้านใน Google Drive</li>
+<li>ข้อมูลในเครื่อง (token, รายชื่อร้าน) จะถูกลบเมื่อคุณออกจากระบบหรือถอนการติดตั้งแอป</li>
+<li>ยกเลิกสิทธิ์ที่ให้แอปได้ที่ <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
+</ul>
+
+<h2>6. ความปลอดภัย</h2>
+<p>การเชื่อมต่อทั้งหมดกับ Google ใช้ HTTPS และแอปไม่ส่งข้อมูลผ่านเซิร์ฟเวอร์ตัวกลาง</p>
+
+<h2>7. เด็ก</h2>
+<p>แอปออกแบบมาสำหรับใช้งานทางธุรกิจ ไม่ได้มุ่งให้เด็กอายุต่ำกว่า 13 ปีใช้งาน</p>
+
+<h2>8. การเปลี่ยนแปลงนโยบาย</h2>
+<p>หากมีการเปลี่ยนแปลง จะอัปเดตหน้านี้และวันที่มีผลด้านบน</p>
+
+<h2>9. ติดต่อ</h2>
+<p>อีเมล: <a href="mailto:sheetapps.support@gmail.com">sheetapps.support@gmail.com</a></p>
+</div></main>
+<footer><div class="wrap">© 2026 Stock Sheet (สต็อกชีต) · ติดต่อ: <a href="mailto:sheetapps.support@gmail.com">sheetapps.support@gmail.com</a></div></footer></body></html>
