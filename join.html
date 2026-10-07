@@ -1,0 +1,40 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>เข้าร่วมร้าน · Stock Sheet</title>
+<style>
+.join{max-width:440px;margin:0 auto;text-align:center}
+.join img.icon{width:88px;height:88px;border-radius:24px;margin:8px auto 4px;display:block;box-shadow:0 10px 24px rgba(47,107,255,.25)}
+.btn{display:block;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:16px;border-radius:16px;margin:22px 0 10px;box-shadow:0 8px 20px rgba(47,107,255,.3)}
+.code{font-family:ui-monospace,monospace;font-size:13px;word-break:break-all;background:var(--soft);border-radius:12px;padding:12px;margin:8px 0}
+.copy{background:none;border:1px solid var(--line);border-radius:10px;padding:8px 14px;font:inherit;color:var(--brand);font-weight:600;cursor:pointer}
+ol{text-align:left}
+</style></head><body>
+<header><div class="wrap"><img src="icon.png" alt=""><a href="index.html">สต็อกชีต · Stock Sheet</a></div></header>
+<main><div class="wrap join">
+<img class="icon" src="icon.png" alt="">
+<h1>คุณได้รับเชิญเข้าร้าน</h1>
+<p class="muted">เปิดหน้านี้ในมือถือที่ติดตั้งแอปสต็อกชีตแล้ว แล้วกดปุ่มด้านล่าง</p>
+<a id="open" class="btn" href="#">เปิดในแอปสต็อกชีต</a>
+<p class="muted">ถ้าปุ่มไม่ทำงาน: เปิดแอป → "เข้าร่วมร้าน" → วางรหัสนี้</p>
+<div id="code" class="code">—</div>
+<button class="copy" id="copy">คัดลอกรหัส</button>
+<div class="card" style="text-align:left;margin-top:24px">
+<b>ต้องล็อกอินด้วยอีเมลที่เจ้าของร้านแชร์ให้</b>
+<ol><li>ติดตั้งแอปสต็อกชีต</li><li>เข้าสู่ระบบด้วย Google (อีเมลที่ได้รับเชิญ)</li><li>กลับมากดปุ่ม "เปิดในแอปสต็อกชีต"</li></ol>
+</div>
+</div></main>
+<footer><div class="wrap">© 2026 Stock Sheet (สต็อกชีต) · ติดต่อ: <a href="mailto:sheetapps.support@gmail.com">sheetapps.support@gmail.com</a></div></footer>
+<script>
+(function(){
+  var id=(new URLSearchParams(location.search).get('id')||'').replace(/[^A-Za-z0-9_-]/g,'');
+  var code=document.getElementById('code'), open=document.getElementById('open');
+  if(!id){code.textContent='ลิงก์ไม่ครบ — ขอลิงก์เชิญใหม่จากเจ้าของร้าน';open.style.display='none';return;}
+  code.textContent=id;
+  var android=/Android/i.test(navigator.userAgent);
+  open.href=android
+    ? 'intent://join/'+id+'#Intent;scheme=stocksheet;package=com.onemillion.stocksheet;end'
+    : 'stocksheet://join/'+id;
+  document.getElementById('copy').onclick=function(){
+    (navigator.clipboard?navigator.clipboard.writeText(id):Promise.reject()).then(function(){this.textContent='คัดลอกแล้ว ✓'}.bind(this),function(){});
+  };
+})();
+</script>
+</body></html>
